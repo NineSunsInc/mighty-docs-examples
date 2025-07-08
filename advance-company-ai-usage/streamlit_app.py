@@ -80,7 +80,7 @@ def display_private_data_qa_agent():
 
     llm = ChatOpenAI(
         model_name="deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
-        base_url="http://localhost:8080/api/v1/app/ai",
+        base_url="https://service-platform.prod.mightynetwork.ai/api/v1/app/ai",
         api_key=os.getenv("MIGHTY_OAUTH_APPLICATION_API_KEY")
     )
 

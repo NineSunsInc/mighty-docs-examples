@@ -31,7 +31,7 @@ def get_user_data():
 def answer_private_data_question(user_question: str, user_data: dict) -> str:
     llm = ChatOpenAI(
         model_name="deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
-        base_url="http://localhost:8080/api/v1/app/ai",
+        base_url="https://service-platform.prod.mightynetwork.ai/api/v1/app/ai",
         api_key=os.getenv("MIGHTY_DATA_API_KEY")
     )
     prompt = (
