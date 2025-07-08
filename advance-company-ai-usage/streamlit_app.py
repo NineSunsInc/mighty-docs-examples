@@ -13,9 +13,9 @@ from langchain_openai import ChatOpenAI
 # Load environment variables
 load_dotenv()
 
-application_api_key = os.getenv("MIGHTY_OAUTH_APPLICATION_API_KEY")
-application_private_key = os.getenv("MIGHTY_OAUTH_APPLICATION_PRIVATE_KEY")
-application_id = os.getenv("MIGHTY_OAUTH_APPLICATION_ID")
+application_api_key = os.getenv("MIGHTY_APPLICATION_API_KEY")
+application_private_key = os.getenv("MIGHTY_APPLICATION_PRIVATE_KEY")
+application_id = os.getenv("MIGHTY_APPLICATION_ID")
 
 # Mighty application client
 application_client = MightyApplicationClient(
@@ -81,7 +81,7 @@ def display_private_data_qa_agent():
     llm = ChatOpenAI(
         model_name="deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
         base_url="https://service-platform.prod.mightynetwork.ai/api/v1/app/ai",
-        api_key=os.getenv("MIGHTY_OAUTH_APPLICATION_API_KEY")
+        api_key=os.getenv("MIGHTY_APPLICATION_API_KEY")
     )
 
     def answer_private_data_question(user_question: str, user_data: dict) -> str:

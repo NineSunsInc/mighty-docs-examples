@@ -6,9 +6,9 @@ from mighty_sdk_core.auth.types import CodeChallengeMethod, OAuthAuthorizationPa
 
 load_dotenv()
 
-application_api_key = os.getenv("MIGHTY_OAUTH_APPLICATION_API_KEY")
-application_id = os.getenv("MIGHTY_OAUTH_APPLICATION_ID")
-application_private_key = os.getenv("MIGHTY_OAUTH_APPLICATION_PRIVATE_KEY")
+application_api_key = os.getenv("MIGHTY_APPLICATION_API_KEY")
+application_id = os.getenv("MIGHTY_APPLICATION_ID")
+application_private_key = os.getenv("MIGHTY_APPLICATION_PRIVATE_KEY")
 mighty_base_url = os.getenv("MIGHTY_BASE_URL")
 
 # Ensure all credentials are set
